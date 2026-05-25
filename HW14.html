@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW14</title>
+    <link rel="stylesheet" href="stylesheet"  href = "style.css">
+    <style>
+        body, html{
+            height: 100%;
+            margin: 0;
+            font-size: 16px;
+            font-family:"Lato", sans-serif;
+            font-weight: 400;
+            line-height: 1.8em;
+            color: #666;
+            background-color: #b6f8ef;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            display: inline;
+            color: #1affa3;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .topnav a:hover {
+            background-color: #111;
+        }
+
+        .pimg1, .pimg2, .pimg3 {
+            position: relative;
+            opacity: 0.70;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .pimg1 {
+            background-image: url('image1.jpg');
+            min-height: 100%;
+        }
+
+        .pimg2 {
+            background-image: url('image2.jpg');
+            min-height:400px;
+        }
+        .pimg3 {
+            background-color: url('image3.jpg');
+            min-height: 400px;
+        }
+
+        .section {
+            text-align:center;
+            padding:50px 80px;
+        }
+
+        .section-light{
+            background-color: #f4f4f4;
+            color: #666;
+        }
+
+        .section-dark{
+            background-color: #282e34;
+            color: #ddd;
+        }
+
+        .ptext {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            font-size: 27px;
+            letter-spacing:8px;
+            text-transform: uppercase;
+        }
+
+        .ptext .border {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .ptext .border .trans {
+            background-attachment: transparent;
+        }
+
+        @media(max-widht:568px) {
+            .pimg1, .pimg2, .pimg3 {
+                background-attachment:scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About-Me</a>
+        <a href="#contant">Gallery</a>
+        <a href="#contact">contact-Us</a>
+    </div><br>
+
+    <span class="border trans" style="font-size: 40px;">
+        <center>Welcome all to this website</center>
+    </span><br>
+
+    <section class="section section-dark">
+        <h2>Section One</h2>
+        <p>web development is the work involved in developing a web site for the internet (world wide web) or an internet (a private network).</p>
+    </section>
+
+    <div class="pimg3">
+      <div class="ptext">
+        <span class="border trans">Image Two Text</span>
+      </div>
+    </div>
+
+    <section class="section section-dark">
+        <span>All @copy rights reserved by Swati Singh</span>
+      </section>
+      <section>
+        <img class="mySlides" src="image1.jpg" style="height: 500px; width: 1340px;">
+        <img class="mySlides" src="image2.jpg" style="height: 500px; width: 1340px;">
+        <img class="mySlides" src="image3.jpg" style="height: 500px; width: 1340px;">
+      </section>
+
+      <script>
+        // Automtic sildeshow - change image enery 3 seconds
+        var myindex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x =
+            document.getElementByIdbyClassName("mySlides")
+            ;
+            for (i = 0; i < x.lenght; i++) {
+                x[i].style.display = "none";
+            }
+            myindex++;
+            if (myindex > x.lenght) {myindex = 1}
+            x[myindex-1].style.display = "block";
+            setTimeout(carousel,3000);
+        }
+      </script>
+</body>
+</html>
