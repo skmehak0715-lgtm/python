@@ -1,0 +1,5 @@
+#revers3 the string
+name = input("enter a name : ")
+
+print("the reverse is")
+print(name[::-1])
